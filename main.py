@@ -38,7 +38,10 @@ def position_balls(table, balls_list):
     ball_diameter = balls_list[0].BALL_DIAMETER
     positions = table.place_rack(ball_diameter)
 
-    for i in range(1,16):
+    for i in range(0,16):
+        if i == 0:
+            balls_list[i].x = positions[0][0]
+            balls_list[i].y = positions[0][1]
         if i == 1:
             balls_list[i].x = positions[1][0]
             balls_list[i].y = positions[1][1]
